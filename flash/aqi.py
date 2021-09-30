@@ -8,7 +8,7 @@ except ImportError:
   import m5stickc as hardware
 
 # If you don't like the "marching ants" chaser, set to False.
-CHASER = True
+CHASER = False
 FORGETFUL_USER_MINUTES = 2
 
 # This is only approximate, but close enough.
