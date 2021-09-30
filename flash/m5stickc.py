@@ -14,8 +14,8 @@ XACC = 0
 YACC = 1
 ZACC = 2
 
-MAX_X = 160
-MAX_Y = 80
+MAX_X = 240
+MAX_Y = 135
 CHASE_INCR = 8  # Must be evenly divisible.
 CHASE_WIDTH = 4
 
@@ -199,7 +199,7 @@ class Hardware():
     Not much fits at this size: Really just 3 characters.
     """
     self.SetOrientation()
-    lcd.font(lcd.FONT_DejaVu72, rotate=0, transparent=True)
+    lcd.font(lcd.FONT_DejaVu72, rotate=180, transparent=True)
     lcd.fill(bg_color)
     lcd.print(text, 5, 5, text_color)
 
