@@ -5,8 +5,8 @@ import traceback
 import pygame
 import requests as urequests
 
-MAX_X = 160
-MAX_Y = 80
+MAX_X = 240
+MAX_Y = 135
 CHASE_INCR = 8  # Must be evenly divisible.
 CHASE_WIDTH = 4
 
@@ -181,7 +181,7 @@ class Hardware():
   def ClearSmallRight(self, bg_color):
     font = pygame.font.SysFont('DejaVu Sans Mono', 24, False, False)
     text_size = font.size('E')
-    pygame.draw.rect(self.screen, bg_color, [140, 30, *text_size])
+    pygame.draw.rect(self.screen, bg_color, [218, 50, *text_size])
     pygame.display.flip()
 
   def DisplaySmallRight(self, bg_color, text_color, text_string):
@@ -189,7 +189,7 @@ class Hardware():
     self.ClearSmallRight(bg_color)
     font = pygame.font.SysFont('DejaVu Sans Mono', 24, False, False)
     text = font.render('%s' % text_string, True, text_color)
-    self.screen.blit(text, [140, 30])
+    self.screen.blit(text, [218, 50])
     pygame.display.flip()
 
   def DisplayBig(self, bg_color, text_color, text):
@@ -197,7 +197,7 @@ class Hardware():
 
     Not much fits at this size: Really just 3 characters.
     """
-    font = pygame.font.SysFont('DejaVu Sans Mono', 72, False, False)
+    font = pygame.font.SysFont('DejaVu Sans Mono', 144, False, False)
     text = font.render('%s' % text, True, text_color)
     self.screen.fill(bg_color)
     self.screen.blit(text, [5, 5])
