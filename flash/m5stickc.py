@@ -199,9 +199,9 @@ class Hardware():
     Not much fits at this size: Really just 3 characters.
     """
     self.SetOrientation()
-    lcd.font(lcd.FONT_DejaVu72, rotate=0, transparent=True)
+    lcd.font(lcd.FONT_DejaVu100, rotate=0, transparent=True)
     lcd.fill(bg_color)
-    lcd.print(text, 10, 10, text_color)
+    lcd.print(text, 5, 5, text_color)
 
   def _GetDefaults(self):
     """The SSID & Password are already on the device: Use them.
