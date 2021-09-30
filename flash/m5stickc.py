@@ -119,7 +119,7 @@ class Hardware():
       True if it changed, otherwise False.
     """
     x = self.imu.acceleration[XACC]
-    orientation = lcd.LANDSCAPE_FLIP if x < .6 else lcd.LANDSCAPE
+    orientation = lcd.LANDSCAPE if x < -.6 else lcd.LANDSCAPE_FLIP
     if orientation != self.orientation:
       self.orientation = orientation
       lcd.orient(orientation)
@@ -201,7 +201,7 @@ class Hardware():
     self.SetOrientation()
     lcd.font(lcd.FONT_DejaVu72, rotate=0, transparent=True)
     lcd.fill(bg_color)
-    lcd.print(text, 5, 5, text_color)
+    lcd.print(text, 10, 10, text_color)
 
   def _GetDefaults(self):
     """The SSID & Password are already on the device: Use them.
