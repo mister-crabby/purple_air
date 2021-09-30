@@ -197,7 +197,7 @@ class Hardware():
 
     Not much fits at this size: Really just 3 characters.
     """
-    font = pygame.font.SysFont('DejaVu Sans Mono', 144, False, False)
+    font = pygame.font.SysFont('DejaVu Sans Mono', 96, False, False)
     text = font.render('%s' % text, True, text_color)
     self.screen.fill(bg_color)
     self.screen.blit(text, [5, 5])
