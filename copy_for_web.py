@@ -6,7 +6,7 @@ import wifiCfg
 
 sensor_location = '{"sensor_location": "00000"}\n'   #  <-- Purple air device number here!
 
-URL = 'https://raw.githubusercontent.com/dclaar/purple_air/main/flash'
+URL = 'https://raw.githubusercontent.com/mister-crabby/purple_air/main/flash'
 FILES = [
     'aqi.py',
     'aqi_and_color.py',
