@@ -119,7 +119,7 @@ class Hardware():
       True if it changed, otherwise False.
     """
     x = self.imu.acceleration[XACC]
-    orientation = lcd.LANDSCAPE_FLIP if x < -.6 else lcd.LANDSCAPE
+    orientation = lcd.LANDSCAPE_FLIP if x < .6 else lcd.LANDSCAPE
     if orientation != self.orientation:
       self.orientation = orientation
       lcd.orient(orientation)
